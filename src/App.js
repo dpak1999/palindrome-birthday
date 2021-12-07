@@ -1,11 +1,14 @@
 /** @format */
 
+import Main from './Main';
+
 function App() {
   return (
-    <div className="bg-black min-h-screen">
+    <div className=" min-h-screen">
       <h1 className="text-white text-2xl text-center font-mono">
         Is you birthday palindrome?
       </h1>
+      <Main />
     </div>
   );
 }
