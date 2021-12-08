@@ -1,31 +1,11 @@
 <!-- @format -->
 
-# React Tailwind Started Template
+# Is your birthday palindrome
 
-This is a bare bones react tailwind setup for speed development without any hassle.
+- This is a web app built with react which lets the user enter thier birthday and checks if it is palindrome or not.
+- It checks for three date formats
+  - YYYY-MM-DD
+  - DD-MM-YYYY
+  - MM-DD-YY
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-### `yarn build:css`
-
-It initialises postbuild and creates a development build of tailwind css and stores it inside `src/assets/index.css`
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Click [Here](https://practical-leavitt-e471f2.netlify.app/) to check if you birthday is palindrom or not.
