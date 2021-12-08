@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import gif from './assets/gif.mp4';
 import { checkPalindrome } from './utility';
-// import { checkPalindrome } from '../utility';
 
 const Main = () => {
   const [enteredInput, setEnteredInput] = useState('');
@@ -19,7 +18,6 @@ const Main = () => {
     setLoading(true);
 
     setTimeout(() => {
-      console.log('hii');
       checkPalindrome(
         enteredInput,
         setFlag,
@@ -29,33 +27,41 @@ const Main = () => {
         setFormatDateString,
         setLoading
       );
-    }, 2000);
+    }, 2500);
   };
 
   return (
     <>
-      {console.log('', nextPalindromeDate)}
-      <div>
+      <div className="text-center mt-4">
         <form onSubmit={handleOnSubmit}>
           <div>
             <input
+              className="border border-purple-500 outline-none w-80 rounded p-2"
               type="date"
               name="userInput"
               id="userInput"
               onChange={(e) => setEnteredInput(e.target.value)}
               required
             />
-            <button type="submit" className="bg-white">
+            <br />
+            <button
+              type="submit"
+              className="text-white border border-lime-400 rounded mt-4 px-5 py-1 hover:bg-lime-500 hover:text-black"
+            >
               Check
             </button>
           </div>
         </form>
       </div>
       <div>
-        {loading && <img src={gif} alt="giphy" />}
+        {loading && (
+          <video autoPlay loop className="ml-auto mr-auto block mt-4">
+            <source src={gif}></source>
+          </video>
+        )}
         {flag === true && !loading && (
-          <div>
-            <div>
+          <div className="text-white text-center mt-4 flex ">
+            <div className="border border-purple-500 mx-auto p-3">
               <h1>Kudos !</h1>
               <h2>
                 Your birthdate is a <span>palindrome</span> .
@@ -67,8 +73,8 @@ const Main = () => {
           </div>
         )}
         {flag === false && !loading && (
-          <div>
-            <div>
+          <div className="text-white text-center mt-4 flex ">
+            <div className="border border-purple-500 mx-auto p-3">
               <h1>Oh Snap ! </h1>
               <div>
                 <h2>
